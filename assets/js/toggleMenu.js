@@ -1,5 +1,4 @@
 import { closeForm } from "./login.js";
-import { updateCartCount } from "./cart.js";
 
 const nav = document.querySelector(".nav");
 const navItems = document.querySelector(".nav-items");
@@ -88,7 +87,6 @@ export const sectionScroll = function (e) {
         document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
       }, 500);
       window.location.href = `/index.html${id}`;
-      updateCartCount();
     } else {
       // If already on the main page, smoothly scroll to the section
       document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
