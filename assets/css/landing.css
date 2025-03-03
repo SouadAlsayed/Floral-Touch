@@ -7,7 +7,6 @@ header {
   color: var(--text-color);
   padding: 12px 0;
   font-size: 16px;
-  box-shadow: var(--box-shadow);
 }
 
 header .container {
@@ -89,6 +88,7 @@ header .exit-menu {
     right: 0;
     padding: 40px;
     background-color: var(--white-color);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     z-index: 150;
   }
   header .nav.show-menu {
