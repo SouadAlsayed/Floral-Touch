@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tab Logo -->
+    <link rel="icon" type="image/png" href="../images/logo.webp" />
+    <title>Floral Touch</title>
+    <!-- Css Links -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header class="cart-header">
+      <div class="container">
+        <div class="menu-overlay hidden"></div>
+        <div class="logo">
+          <img src="../images/logo.webp" alt="" />
+          <h2><a href="../../index.html">Floral Touch</a></h2>
+        </div>
+        <i class="fa-solid fa-bars menu"></i>
+        <nav class="nav hide-menu">
+          <ul class="nav-items">
+            <li class="hidden-li hidden exit-menu">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </li>
+            <li class="active nav-item">
+              <a class="nav-item" href="../../index.html">Home</a>
+            </li>
+            <li><a class="nav-item" href="#shop">Shop</a></li>
+            <li>
+              <a class="nav-item" href="#occasions">Occasions</a>
+            </li>
+            <li>
+              <a class="nav-item" href="#about-us">About us</a>
+            </li>
+            <li>
+              <a class="nav-item" href="#contact-us">Contact us</a>
+            </li>
+            <!-- Menu li -->
+            <li class="hidden-li hidden menu-login login-i-n">
+              <a href="#">Log in</a>
+            </li>
+            <li class="hidden-li hidden cart-i">
+              <a href="#">Shopping Cart</a><span class="cart-num">0</span>
+            </li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <ul>
+            <li class="login-i-n">
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li class="cart-i">
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+              <span class="cart-num">0</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <div class="container">
+      <!-- Modal login -->
+      <div class="login-overlay hidden">
+        <div class="login-form">
+          <div class="login-part">
+            <h2 class="form-name">Login Form</h2>
+            <input
+              type="text"
+              class="lg-user-name"
+              placeholder="Your User Name"
+            />
+            <input type="email" class="lg-email" placeholder="Your Email" />
+            <input
+              type="password"
+              class="lg-password"
+              placeholder="Your Password"
+            />
+            <button id="login-btn">Log in</button>
+          </div>
+          <div class="register-part">
+            <p><a href="#" id="to-register-form">Don't have an account?</a></p>
+            <button id="register-btn" class="hidden">Register</button>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+      <div class="breadcrumb">
+        <a href="#">Home</a>
+        <span>/</span>
+        <span>Cart</span>
+      </div>
+
+      <h1>YOUR CART</h1>
+
+      <div class="cart-layout">
+        <div class="cart-items">
+          <div id="cart-items-list"></div>
+        </div>
+
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="delivery">$15</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="total">$0</span>
+          </div>
+
+          <button class="checkout-btn" onclick="showCheckout()">
+            Go to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Offers -->
+    <footer id="discount">
+      <div class="container">
+        <div class="discount-body">
+          <h2>Get Your Discount Today! 🌸✨</h2>
+          <p>
+            Get exclusive discounts on our stunning floral collections—just for
+            you!<br />
+            Join now and save on your next blooming surprise!
+          </p>
+          <input type="email" placeholder="Your Email" />
+        </div>
+      </div>
+    </footer>
+    <!-- End Offers -->
+
+    <script type="module" defer src="../js/cart.js"></script>
+  </body>
+</html>

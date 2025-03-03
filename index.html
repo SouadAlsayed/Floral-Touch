@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tab Logo -->
+    <link rel="icon" type="image/png" href="assets/images/logo.webp" />
+    <title>Floral Touch</title>
+
+    <!-- Css Links -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+
+    <!--Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pre-load -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/L1.webp"
+      type="image/jpeg"
+    />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container">
+        <div class="menu-overlay hidden"></div>
+        <div class="logo">
+          <img src="assets/images/logo.webp" alt="" />
+          <h2><a href="#">Floral Touch</a></h2>
+        </div>
+        <i class="fa-solid fa-bars menu"></i>
+        <nav class="nav hide-menu">
+          <ul class="nav-items">
+            <li class="hidden-li hidden exit-menu">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </li>
+            <li class="active nav-item">
+              <a class="nav-item" href="index.html">Home</a>
+            </li>
+            <li><a class="nav-item" href="#shop">Shop</a></li>
+            <li><a class="nav-item" href="#occasions">Occasions</a></li>
+            <li><a class="nav-item" href="#about-us">About us</a></li>
+            <li><a class="nav-item" href="#contact-us">Contact us</a></li>
+            <!-- Menu li -->
+            <li class="hidden-li hidden menu-login login-i-n">
+              <a href="#">Log in</a>
+            </li>
+            <li class="hidden-li hidden cart-i">
+              <a href="./assets/html/cart.html">Shopping Cart</a
+              ><span class="cart-num">0</span>
+            </li>
+          </ul>
+        </nav>
+        <div class="icons">
+          <ul>
+            <li class="login-i-n">
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li class="cart-i">
+              <a href="./assets/html/cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="cart-num">0</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Landing -->
+    <div class="landing">
+      <div class="landing-overlay"></div>
+      <div class="text">
+        <h1>Floral Touch</h1>
+        <p>
+          Where Every Bloom Tells a Story! Let our flowers add beauty and joy to
+          your special moments.
+        </p>
+      </div>
+      <!-- Modal login -->
+      <div class="login-overlay hidden">
+        <div class="login-form">
+          <div class="login-part">
+            <h2 class="form-name">Login Form</h2>
+            <input
+              type="text"
+              class="lg-user-name"
+              placeholder="Your User Name"
+            />
+            <input type="email" class="lg-email" placeholder="Your Email" />
+            <input
+              type="password"
+              class="lg-password"
+              placeholder="Your Password"
+            />
+            <button id="login-btn">Log in</button>
+          </div>
+          <div class="register-part">
+            <p><a href="#" id="to-register-form">Don't have an account?</a></p>
+            <button id="register-btn" class="hidden">Register</button>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+    </div>
+    <!-- End Landing -->
+    <!-- Start Shop -->
+    <section id="shop">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Shop</h2>
+          <h4>Our Products</h4>
+        </div>
+        <div class="sort-dropdown">
+          <button class="dropdown-btn">Sort by latest</button>
+          <ul class="dropdown-menu">
+            <li data-value="latest" class="selected">Sort by latest</li>
+            <li data-value="price-low-high">Sort by price: low to high</li>
+            <li data-value="price-high-low">Sort by price: high to low</li>
+          </ul>
+        </div>
+        <div class="product cards">
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f1-h.webp"
+                src="assets/images/f1.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Parrot Tulips</h3>
+              <h4 class="card-price item-price">1000.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f2-h.webp"
+                src="assets/images/f2.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Tulips</h3>
+              <h4 class="card-price item-price">1200.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f3-h.webp"
+                src="assets/images/f3.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Peonies</h3>
+              <h4 class="card-price item-price">1500.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f4-h.webp"
+                src="assets/images/f4.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Roses & Wildflowers</h3>
+              <h4 class="card-price item-price">2000.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f5-h.webp"
+                src="assets/images/f5.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Red Tulips</h3>
+              <h4 class="card-price item-price">1200.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f6-h.webp"
+                src="assets/images/f6.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Purple Tulips</h3>
+              <h4 class="card-price item-price">1400.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f7-h.webp"
+                src="assets/images/f7.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Yellow Tulips</h3>
+              <h4 class="card-price item-price">1300.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+
+          <div class="card item-card">
+            <div class="card-img-wrapper">
+              <img
+                class="card-img item-img lazy-load"
+                data-src="assets/images/f8-h.webp"
+                src="assets/images/f8.webp"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title item-title">Red Roses</h3>
+              <h4 class="card-price item-price">2000.00 EGP</h4>
+              <button class="add-to-cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <a class="show-product" href="#"
+              ><i class="fa-regular fa-eye"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Shop -->
+    <!-- Start Offers -->
+    <section id="offers">
+      <div class="offers-overlay"></div>
+      <div class="container">
+        <div class="offers-body">
+          <h2>Stay Connected with Floral Touch!</h2>
+          <p>
+            Subscribe to our newsletter for exclusive updates, special
+            promotions, and discount offers straight to your inbox.
+          </p>
+          <input type="email" placeholder="Your Email" />
+        </div>
+      </div>
+    </section>
+    <!-- End Offera -->
+    <!-- Start Occasion -->
+    <section id="occasions">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Occasions</h2>
+          <ul class="occasions-name">
+            <li class="motherDay"><h4>Mother's Day</h4></li>
+            <li class="valentine"><h4>Valentine</h4></li>
+            <li class="weddings"><h4>Weddings</h4></li>
+            <li class="birthdays"><h4>Birthdays</h4></li>
+          </ul>
+        </div>
+        <div class="slider-container">
+          <button class="prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="slider"></div>
+          <button class="next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End Occasion -->
+    <!-- Start About Us -->
+    <section id="about-us">
+      <div class="container">
+        <div class="main-heading">
+          <h2>About Us</h2>
+          <h4>Discover more about who we are</h4>
+        </div>
+
+        <div class="about-us-container">
+          <div class="img-wrapp item-1">
+            <img src="assets/images/a1.webp" alt="" />
+          </div>
+          <div class="about-us-text item-2">
+            <h3>Our Story</h3>
+            <p>
+              Floral Touch was founded out of a passion for flowers, aiming to
+              bring beauty and joy to every occasion. Over the years, we’ve
+              grown into one of Egypt’s leading flower delivery services. We
+              take pride in offering a wide variety of stunning floral
+              arrangements for all celebrations. Whether it’s a wedding,
+              anniversary, or special event, we ensure every bouquet is crafted
+              with care. Our dedication to quality has earned us the trust of
+              many customers across Egypt.
+            </p>
+          </div>
+
+          <div class="img-wrapp item-3">
+            <img src="assets/images/a2.webp" alt="" />
+          </div>
+          <div class="about-us-text item-4">
+            <h3>Our Promise</h3>
+            <p>
+              We are committed to providing a seamless and delightful shopping
+              experience from start to finish. With years of expertise, we
+              deliver only the freshest flowers, ensuring every arrangement
+              exceeds expectations. Our flowers are handpicked and crafted with
+              attention to detail. We prioritize timely delivery, so your
+              special moments are always celebrated with style. At Floral Touch,
+              customer satisfaction is our top priority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Us -->
+    <!-- Start Contact Us -->
+    <section id="contact-us">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Contact us</h2>
+          <h4>
+            contact us via the form below & we'll get back to your as soon as we
+            can
+          </h4>
+        </div>
+        <div class="contact-us-container">
+          <ul class="contact-us-info">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <div class="info-part">
+                <h4>Email</h4>
+                <a href="#">floral@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div class="info-part">
+                <h4>Phone</h4>
+                <a href="#">000 0000 0000</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-pin"></i>
+              <div class="info-part">
+                <h4>Address</h4>
+                <a href="#">1234 Street Adress</a>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <div class="info-part">
+                <h4>Social</h4>
+
+                <ul class="social-media">
+                  <li>
+                    <a class="instagram" href="#"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="facebook" href="#"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="#"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <img src="assets/images/contact.jpg" alt="" />
+          </ul>
+
+          <div class="message">
+            <input type="text" placeholder="Name" />
+            <input
+              type="tel"
+              placeholder="Phone"
+              maxlength="11"
+              pattern="\d{11}"
+            />
+            <input type="email" placeholder="Email" />
+            <textarea
+              rows="8"
+              name="message"
+              id="message"
+              placeholder="Message"
+            ></textarea>
+            <button id="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Us -->
+    <!-- Start Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="logo">
+          <h2>Floral Touch</h2>
+          <p>
+            Bringing beauty and nature together with timeless floral designs,
+          </p>
+          <p>© 2025 Floral Touch.</p>
+        </div>
+        <ul class="occasions-links">
+          <li><h4>Occasions</h4></li>
+          <li><a class="footer-link" href="#occasions">Mother's Day</a></li>
+          <li><a class="footer-link" href="#occasions">Valentine</a></li>
+          <li><a class="footer-link" href="#occasions">Weddings</a></li>
+          <li><a class="footer-link" href="#occasions">Birthdays</a></li>
+        </ul>
+        <ul class="contact-us-links">
+          <li><h4>Contact Us</h4></li>
+          <li><a class="footer-link" href="#contact-us">Email</a></li>
+          <li><a class="footer-link" href="#contact-us">Instagram</a></li>
+          <li><a class="footer-link" href="#contact-us">Facebook</a></li>
+          <li><a class="footer-link" href="#contact-us">Twitter</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Overlay -->
+    <div class="overlay hidden">
+      <!-- Spinner -->
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Start Product Modal -->
+    <div class="flower-modal item-card hidden">
+      <i class="fa-solid fa-xmark exit-icon"></i>
+      <div class="flower-img-wrapper">
+        <img class="flower-img item-img" src="" alt="" />
+      </div>
+      <div class="flower-body">
+        <h3 class="flower-title item-title"></h3>
+        <p>
+          Some flowers are seasonal and may be unavailable. We’ll substitute
+          with a similar option in value, style, and color to maintain your
+          arrangement's beauty.
+        </p>
+        <p class="flower-price item-price"></p>
+        <button class="add-to-cart-btn modal-btn">Add to cart</button>
+      </div>
+    </div>
+    <!-- End Product Modal -->
+    <script type="module" defer src="assets/js/script.js"></script>
+  </body>
+</html>

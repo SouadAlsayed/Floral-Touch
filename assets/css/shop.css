@@ -1,0 +1,240 @@
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  background: none;
+  border: 1px solid var(--gray-300);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  width: 250px;
+  font-weight: 600;
+  color: var(--dark-rose);
+  box-shadow: var(--box-shadow);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background: var(--white-color);
+  color: var(--dark-rose);
+  padding: 0;
+  margin: 5px 0;
+  width: 250px;
+  display: none;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius);
+  z-index: 100;
+}
+
+/* Menu items */
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all var(--main-transition);
+  border-radius: var(--radius);
+}
+
+/* Hover effect */
+.dropdown-menu li:hover {
+  background: var(--dark-rose);
+  color: var(--white-color);
+}
+
+/* Show dropdown when active */
+.sort-dropdown.active .dropdown-menu {
+  display: block;
+}
+/* Cards */
+
+img.lazy-load {
+  filter: blur(5px);
+  transition: filter 0.5s ease;
+}
+
+img.lazy-load.loaded {
+  filter: blur(0);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px;
+  color: var(--text-color);
+}
+.card {
+  flex: 0 0 250px;
+  background-color: rgba(249, 248, 246, 0.529);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  color: var(--dark-rose);
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .card-body {
+  padding: 15px 15px 40px;
+  text-align: center;
+}
+.card .card-body .card-price {
+  color: var(--text-color);
+}
+.card .card-body .card-title,
+.card .card-body .card-price {
+  margin-bottom: 10px;
+}
+.card .card-body .card-title {
+  cursor: pointer;
+}
+
+.card .card-img {
+  width: 100%;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+/* Overlay effect */
+.card .card-img-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card .card-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Dark transparent overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay on hover */
+.card:hover .card-img-wrapper::before {
+  opacity: 1;
+}
+.card .show-product {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.card:hover .show-product {
+  color: var(--white-color);
+  cursor: pointer;
+}
+.card .add-to-cart-btn {
+  position: absolute;
+  bottom: -50px; /* Start hidden below the card */
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  background-color: var(--dark-rose);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: bottom var(--main-transition) ease-in-out,
+    opacity var(--main-transition) ease-in-out;
+}
+.card:hover .add-to-cart-btn {
+  bottom: 0; /* Moves up into view */
+  opacity: 1;
+}
+
+/* Occasions */
+.main-heading ul {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  gap: 25px;
+  align-items: center;
+}
+.main-heading ul li.active,
+.main-heading ul li:hover {
+  color: var(--dark-rose);
+}
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--dark-rose);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.prev-btn {
+  left: -40px;
+}
+.next-btn {
+  right: -40px;
+}
+
+.slider {
+  display: flex;
+  gap: 20px; /* Space between items */
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 15px 0;
+  scrollbar-width: none;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.slider .card {
+  flex: 0 0 calc(25% - 15px);
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .slider .card {
+    flex: 0 0 calc(100% / 3 - 14px);
+  }
+}
+
+@media (max-width: 768px) {
+  .slider .card {
+    flex: 0 0 calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .slider .card {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 525px) {
+  .main-heading ul {
+    grid-auto-flow: row;
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 868px) {
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+}

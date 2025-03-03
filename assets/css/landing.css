@@ -1,0 +1,238 @@
+/* Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  color: var(--text-color);
+  padding: 12px 0;
+  font-size: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+header .logo img {
+  width: 35px;
+}
+header ul {
+  display: flex;
+  font-weight: bold;
+}
+header .nav ul,
+header .icons ul {
+  gap: 40px;
+}
+header ul a:hover,
+header ul .active {
+  color: var(--dark-rose);
+}
+.cart-i {
+  position: relative;
+}
+.cart-num {
+  min-width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: normal;
+  color: var(--white-color);
+  background-color: var(--red-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  box-shadow: var(--box-shadow);
+}
+header .menu,
+header .exit-menu {
+  cursor: pointer;
+  font-size: 20px;
+}
+header .exit-menu {
+  margin-bottom: 40px;
+}
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  header .menu {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  header .nav,
+  header .icons {
+    display: none;
+  }
+  header .nav.show-menu {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    background-color: var(--white-color);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    z-index: 150;
+  }
+  header .nav.show-menu {
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+
+  header .nav.hide-menu {
+    animation: slideOut 0.5s ease-in-out forwards;
+  }
+  header .nav-items.show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 426px) {
+  header .nav.show-menu {
+    width: 60%;
+  }
+}
+@keyframes slideIn {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: -100%;
+    opacity: 0;
+  }
+}
+/* Landing */
+.landing {
+  position: relative;
+  height: 100vh;
+  background-image: url(../images/L1.webp);
+  background-size: cover;
+}
+.landing .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  text-align: center;
+}
+.landing h1 {
+  font-size: 140px;
+  font-family: "Dancing Script", serif;
+  margin-bottom: 60px;
+}
+.landing p {
+  font-size: 18px;
+}
+.landing-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 110;
+  width: 100%;
+  max-width: 450px;
+  min-height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  /* background-color: rgba(249, 248, 246, 0.529);
+  backdrop-filter: blur(10px); */
+  background-color: var(--white-color);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  transition: all var(--main-transition);
+  color: var(--dark-rose);
+  align-items: center;
+}
+.login-form .login-part {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.login-form .login-part h2 {
+  text-align: center;
+  font-size: 30px;
+}
+.login-form .login-part input {
+  width: 100%;
+}
+.login-form button {
+  border: none;
+  padding: 10px 5px;
+  width: 100%;
+  transition: all var(--main-transition);
+  color: var(--white-color);
+  background-color: var(--text-color);
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius);
+}
+.login-form button:hover {
+  background-color: var(--dark-rose);
+}
+.login-form .register-part {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+.login-form .register-part #to-register-form {
+  color: var(--text-color);
+}
+.login-form .register-part #to-register-form:hover {
+  color: var(--dark-rose);
+  text-decoration: underline;
+}
+.login-overlay,
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 120;
+}
