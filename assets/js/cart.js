@@ -164,7 +164,7 @@ document.addEventListener("click", function (e) {
 });
 
 // Function to update cart count in the header
-const updateCartCount = function () {
+export const updateCartCount = function () {
   let currUser = JSON.parse(localStorage.getItem("currentUser")) || {
     cart: [],
   };

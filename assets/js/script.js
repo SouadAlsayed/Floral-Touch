@@ -15,7 +15,7 @@ import {
   restartAutoScroll,
   renderOccasion,
 } from "./slider.js";
-import { renderCart } from "./cart.js";
+import { renderCart, updateCartCount } from "./cart.js";
 /////////////////////////////////////////////////////////////////
 
 // Lazy Loadig
@@ -36,6 +36,7 @@ export const lazyLoad = function () {
   images.forEach((img) => observer.observe(img));
 };
 lazyLoad();
+updateCartCount();
 // Menu
 const menu = document.querySelector(".menu");
 const exitMenuIcon = document.querySelector(".exit-menu");
