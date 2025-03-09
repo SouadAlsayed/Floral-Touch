@@ -66,15 +66,22 @@ const closeMenuOnClickOutside = function (e) {
 };
 // Smooth Scrolling
 export const sectionScroll = function (e) {
-  e.preventDefault();
+  // Handling cart link in menu href
+  const cartLink = document.querySelector(".cart-i a");
+  if (cartLink) {
+    cartLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Cart link clicked!");
+      window.location.href = `${cartLink.getAttribute("href")}`;
+    });
+  }
 
   const isMenuOpen = nav.classList.contains("show-menu");
 
-  if (isMenuOpen) {
-    toggleMenu();
-  }
+  if (isMenuOpen) toggleMenu();
 
   if (e.target.classList.contains("nav-item", "footer-link")) {
+    e.preventDefault();
     const id = e.target.getAttribute("href");
 
     // Check if we are already on the main page

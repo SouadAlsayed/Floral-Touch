@@ -53,7 +53,7 @@ const clearLoginUsers = function () {
 //////////////////////////////////////////////////////////
 
 export const renderCart = function (target) {
-  // if in modal close it
+  // If in modal, close it
   if (target.classList.contains("modal-btn")) closeModal();
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -71,17 +71,25 @@ export const renderCart = function (target) {
   // Extract item details
   const item = cardInfo(itemCard);
 
-  // Create a cart item object
-  const cartItem = {
-    id: Date.now(), // Unique ID for each cart item
-    name: item.title,
-    price: item.price,
-    quantity: 1,
-    image: item.img,
-  };
+  // Check if the item already exists in the cart
+  const existingItem = currUser.cart.find(
+    (cartItem) => cartItem.name === item.title
+  );
 
-  // Add item to the current user's cart
-  currUser.cart.push(cartItem);
+  if (existingItem) {
+    // If the item exists, increment its quantity
+    existingItem.quantity += 1;
+  } else {
+    // If the item doesn't exist, add it to the cart
+    const cartItem = {
+      id: Date.now(), // Unique ID for each cart item
+      name: item.title,
+      price: item.price,
+      quantity: 1,
+      image: item.img,
+    };
+    currUser.cart.push(cartItem);
+  }
 
   // Update the users array with the updated cart for the current user
   users = users.map((user) =>
@@ -93,9 +101,10 @@ export const renderCart = function (target) {
   localStorage.setItem("users", JSON.stringify(users));
 
   updateCartCount();
+  updateCartDisplay(currUser.cart); // Update the cart display
 };
 
-const updateCartDisplay = function (cart) {
+export const updateCartDisplay = function (cart) {
   const cartContainer = document.getElementById("cart-items-list");
   const totals = calculateTotals(cart);
 

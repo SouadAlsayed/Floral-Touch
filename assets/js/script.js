@@ -15,7 +15,7 @@ import {
   restartAutoScroll,
   renderOccasion,
 } from "./slider.js";
-import { renderCart } from "./cart.js";
+import { renderCart, updateCartDisplay, updateCartCount } from "./cart.js";
 /////////////////////////////////////////////////////////////////
 
 // Lazy Loadig

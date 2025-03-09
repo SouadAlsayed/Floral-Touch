@@ -55,35 +55,43 @@ export const register = function () {
 };
 
 export const login = function () {
-  // Get latest users list
-  users = JSON.parse(localStorage.getItem("users")) || [];
+  let users = JSON.parse(localStorage.getItem("users")) || [];
   console.log("Login : ", users);
-  const user = {
-    userName: lgUserName.value,
-    email: lgEmail.value,
-    password: lgPassword.value,
-    cart: [],
-  };
 
-  // First User
-  if (!users) {
+  const email = lgEmail.value;
+  const password = lgPassword.value;
+
+  if (users.length === 0) {
+    alert("No users found! Please register first.");
     toggleRegForm();
     return;
   }
 
-  const userFound = users.find((u) => {
-    return u.email === lgEmail.value;
-  });
+  const userFound = users.find((u) => u.email === email);
 
-  // User Not Found need to register
   if (!userFound) {
     alert("User not found! Please register first.");
     toggleRegForm();
     return;
   }
-  // Store the logged-in user
-  localStorage.setItem("currentUser", JSON.stringify(user));
+
+  if (userFound.password !== password) {
+    alert("Incorrect password! Please try again.");
+    return;
+  }
+
+  const currentUser = {
+    userName: userFound.userName,
+    email: userFound.email,
+    password: userFound.password,
+    cart: userFound.cart || [],
+  };
+
+  localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+  // Update the UI (including cart count and cart page)
   updateUserUI();
+  location.reload();
   closeForm();
 };
 
