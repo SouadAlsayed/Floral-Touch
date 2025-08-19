@@ -15,3 +15,8 @@ Interactive e-commerce website built with vanilla JavaScript featuring user auth
 
 Vanilla JavaScript • HTML5 • CSS3 • Local Storage • Font Awesome
 
+## 🚀 Quick Start
+
+1. Clone repo: `git clone https://github.com/SouadAlsayed/Floral-Touch.git`
+2. Open `index.html` in browser
+3. No server required 
